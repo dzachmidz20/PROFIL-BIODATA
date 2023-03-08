@@ -1,3 +1,7 @@
+<?php
+	require "variabel.php";
+?> 
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -18,7 +22,7 @@
 					<li><a href="#about">Tentang</a></li>
 					<li><a href="#services">Skill</a></li>
 					<li><a href="#contact">Kontak</a></li>
-                    <li><a href="https://www.canva.com/projects" target="blank">Portofolio</a></li>
+                    <li><a href=<?php echo $link["portofolio"]; ?>target="blank">Portofolio</a></li>
 				</ul>
 			</nav>
 		</div>
@@ -27,10 +31,10 @@
 	<!-- Hero section -->
 	<section id="hero">
 		<div class="container">
-			<h1>Halo, Saya Achmad Fahmi Al Hafidz</h1>
-			<h2>Dari Kelas Pemrograman Web A081 </h2>
-            <h1>NPM 21081010223</h1>
-			<a href="biodata.html" target="blank" class="btn">Inilah saya</a>
+			<h1>Halo, Saya <?php echo $nama ["depan"] .''. $nama ["belakang"]; ?> </h1>
+			<h2>Dari Kelas <?php echo $deskripsi_diri ["kelas"]; ?> </h2>
+            <h1>NPM <?php echo $deskripsi_diri ["npm"];?></h1>
+			<a href=<?php echo $link["biodata"];?> target="blank" class="btn">Inilah saya</a>
 		</div>
 	</section>
 
@@ -43,8 +47,8 @@
 				</div>
 				<div class="col-6">
 					<h2>Tentang Saya</h2>
-					<p>Haii, saya Achmad Fahmi Al Hafidz, dengan NPM : 21081010223, dari kelas Pemrograman Web A081. Saya memiliki hobi berolahraga terutama bermain badminton dan semua cabang olahraga yang dominan menggunakan tangan</p>
-					<p>Alamat saya di desa Sugihwaras, Candi, Sidoarjo. Saya masuk jurusan Informatika karena saya pernah belajar coding dan saya suka dengan coding, maka dari itu saya ingin memperbaiki cara coding dengan benar</p>
+					<p>Haii, saya <?php echo $nama["depan"].''.$nama["belakang"]; ?>, dengan NPM <?php echo $deskripsi_diri["npm"];?>, dari <?php echo $deskripsi_diri["kelas"];?>. Saya sekarang berumur <?php echo $umur;?>. <?php echo $about;?></p>
+					<p><?php echo $tentang_saya; ?></p>
 				</div>
 			</div>
 		</div>
@@ -60,21 +64,21 @@
 				<div class="service">
 					<i class="fas fa-code"></i>
 					<h3>Web Programing</h3>
-					<p>Saya berspesialisasi dalam membuat situs web khusus yang disesuaikan dengan kebutuhan spesifik Anda.</p>
+					<p><?php echo $skill["web programing"];?></p>
 				</div>
 			</div>
 			<div class="col-4">
 				<div class="service">
 					<i class="fas fa-mobile-alt"></i>
 					<h3>Desain</h3>
-					<p>Saya juga bisa membuat desain untuk membantu pengerjaan saya terhadap web programming, seperti photoshop, AI dan banyak lagi</p>
+					<p><?php echo $skill["desain"];?></p>
 				</div>
 			</div>
 			<div class="col-4">
 				<div class="service">
 					<i class="fas fa-search"></i>
 					<h3>Servis Hardware</h3>
-					<p>Disisi lain, saya juga bisa memperbaiki hardware yang bermasalah</p>
+					<p><?php echo $skill["servis hardware"];?></p>
 				</div>
 			</div>
 		</div>
@@ -88,8 +92,8 @@
 			<div class="col-68">
 				<div class="contact-info">
 					<div class="social-icons">
-                        <a href="https://instagram.com/fahmialhafidz._?igshid=YmMyMTA2M2Y=" target="blank"><i class="btn2"><img src="Instagram.png"></i></a>
-						<a href="https://github.com/dzachmidz20" target="blank"><i class="btn2"><img src="github.png" width="65px"></i></a>
+                        <a href=<?php echo $link ["instagram"]; ?>target="blank"><i class="btn2"><img src="Instagram.png"></i></a>
+						<a href=<?php echo $link ["github"]; ?> target="blank"><i class="btn2"><img src="github.png" width="65px"></i></a>
 					</div>
 				</div>
 			</div>
